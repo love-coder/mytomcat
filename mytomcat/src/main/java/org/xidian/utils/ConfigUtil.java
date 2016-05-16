@@ -5,11 +5,12 @@ import java.io.FileInputStream;
 import java.util.Properties;
 
 /**
- *
+ * 配置文件相关类
+ * @author HanChun
+ * @version 1.0 2016-5-16
  */
 public class ConfigUtil {
 
-	//private final static String CONFIG_FILE = "/config.properties";
 	private static long lastModified = 0L;
 	private static File configFile = null;
 	private static Properties props = new Properties();
@@ -19,21 +20,21 @@ public class ConfigUtil {
 	}
 
 	/**
+	 * some problems for different OS
 	 */
 	private static void loadProperty() {
 		try {
 			//System.out.print(ConfigUtil.class.getResource(CONFIG_FILE).getPath());
-			String path = Constants.WEB_RESOURCES + File.separator+"config.properties";
+			String path = Constants.WEB_CONF + File.separator+"config.properties";
 //			if (System.getProperty("os.name").startsWith("Windows")) {
 //				path = path.substring(1);
 //				path = path.replaceAll("%20", " ");
 //			}
 			File f = new File(path);
-
 			lastModified = f.lastModified();
 			configFile = f;
 			props.load(new FileInputStream(f));
-			// (new ReloadThread()).start();
+		   (new ReloadThread()).start();
 		} catch (Exception e) {
 			System.out.println("配置文件加载失败");
 			e.printStackTrace();
@@ -42,6 +43,7 @@ public class ConfigUtil {
 	}
 
 	/**
+	 * 
 	 */
 	private static void checkUpdate() {
 		if (configFile != null) {
@@ -62,6 +64,10 @@ public class ConfigUtil {
 	}
 
 	/**
+	 * 
+	 * @param name 属性名
+	 * @param defaultValue null
+	 * @return
 	 */
 	public static String getConfig(String name, String defaultValue) {
 		checkUpdate();
@@ -73,11 +79,19 @@ public class ConfigUtil {
 		}
 	}
 
+	/**
+	 * 
+	 * @param name
+	 * @return
+	 */
 	public static String getConfig(String name) {
 		return getConfig(name, null);
 	}
 
 	/**
+	 * 
+	 * @author HanChun
+	 *
 	 */
 	static class ReloadThread extends Thread {
 		public void run() {

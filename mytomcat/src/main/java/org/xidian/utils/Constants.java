@@ -13,6 +13,8 @@ public class Constants {
   
   public static final String WEB_RESOURCES = System.getProperty("user.dir") + File.separator  + "resources";
   
+  public static final String WEB_CONF = System.getProperty("user.dir") + File.separator  + "conf";
+  
   //for test   WEB-INF/classes
   public static final String WEB_CLASSES_ROOT = System.getProperty("user.dir") + File.separator  + "WEB-INF"
 		  + File.separator  + "classes";

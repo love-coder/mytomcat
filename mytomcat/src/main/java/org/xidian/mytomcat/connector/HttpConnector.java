@@ -8,6 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import org.xidian.mytomcat.container.Container;
+import org.xidian.utils.ConfigUtil;
 
 /**
  * @author HanChun
@@ -22,9 +23,8 @@ public class HttpConnector implements Runnable {
 
 	public void run() {
 		ServerSocket serverSocket = null;
-		int port = 8080;
+		int port = Integer.parseInt(ConfigUtil.getConfig("port"));
 		try {
-			//监听8080端口  
 			serverSocket = new ServerSocket(port, 1, InetAddress.getByName("127.0.0.1"));
 		} catch (IOException e) {
 			System.out.println("服务器启动失败！");
@@ -40,14 +40,14 @@ public class HttpConnector implements Runnable {
 				socket = serverSocket.accept();
 				input = socket.getInputStream();
 				output = socket.getOutputStream();
-				//创建request，并且对socket的input进行处理。获取uri信息
+				//创建request
 				Request request = new Request(input);
 				request.parse();
 				//创建response
 				Response response = new Response(output);
 				response.setRequest(request);
 				String uri = request.getUri();
-				//判断该uri请求是否为我们配置的servlet，如果是则调用该servlet的service方法
+				//判断该uri是否已配置
 				if (container!=null && container.findServlet(uri)!=null) {
 					container.invoke(request, response);
 				}else{
@@ -57,23 +57,36 @@ public class HttpConnector implements Runnable {
 				//浏览器中输入http://localhost:8080/SHUTDOWN
 				shutdown = request.getUri().equals(SHUTDOWN_COMMAND);
 			} catch (Exception e) {
+				System.err.println("在" + ConfigUtil.getConfig("port") + "端口监听失败！");
 				e.printStackTrace();
 				continue;
 			}
 		}
 	}
-
-	public Container getContainer() {
-		return container;
-	}
-	public void setContainer(Container container) {
-		this.container = container;
-	}
 	
+	/**
+	 * 
+	 */
 	public void start(){
 		long now=System.currentTimeMillis();
 		Thread thread=new Thread(this);
 		thread.start();
 		System.out.println("启动连接耗时："+(System.currentTimeMillis()-now)+"ms");
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public Container getContainer() {
+		return container;
+	}
+	
+	/**
+	 * 
+	 * @param container
+	 */
+	public void setContainer(Container container) {
+		this.container = container;
 	}
 }

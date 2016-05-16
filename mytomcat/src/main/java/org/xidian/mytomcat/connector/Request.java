@@ -30,6 +30,10 @@ public class Request implements ServletRequest {
 		this.input = input;
 	}
 
+	/**
+	 * 
+	 * @return 请求相对路径
+	 */
 	public String getUri() {
 		//为空，默认返回index.html
 		if (uri == null || "/".equals(uri)) {
@@ -38,7 +42,11 @@ public class Request implements ServletRequest {
 		return uri;
 	}
 
-	//得到请求相对URL 
+	/**
+	 * 
+	 * @param requestString 
+	 * @return
+	 */
 	private String parseUri(String requestString) {
 		int index1, index2;
 		index1 = requestString.indexOf(' ');
@@ -50,6 +58,9 @@ public class Request implements ServletRequest {
 		return null;
 	}
 
+	/**
+	 * 
+	 */
 	public void parse() {
 		StringBuffer request = new StringBuffer(2048);
 		int i;

@@ -49,6 +49,10 @@ public class DOMParser {
        }
     }
 
+	/**
+	 * 得到映射规则
+	 * @return 映射规则
+	 */
 	public static Map<String, String> getServletMapping() {
 		if(servletMapping == null) {
 			 try {

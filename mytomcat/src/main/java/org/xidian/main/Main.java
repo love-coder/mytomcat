@@ -13,15 +13,12 @@ import org.xidian.mytomcat.container.SimpleContainer;
 public class Main {
 
 	public static void main(String[] args) {
-//		//1.启动容器 .
-//		Container simpleContainer = new SimpleContainer();
-//		simpleContainer.start();
-//		//2.在服务端启动监听
-//		HttpConnector connector = new HttpConnector();
-//		connector.setContainer(simpleContainer);
-//		connector.start();
-		
-		System.out.println(Main.class.getResource("config.properties").getPath());;
-		
+		//1.启动容器 .
+		Container simpleContainer = new SimpleContainer();
+		simpleContainer.start();
+		//2.在服务端启动监听
+		HttpConnector connector = new HttpConnector();
+		connector.setContainer(simpleContainer);
+		connector.start();
 	}
 }
