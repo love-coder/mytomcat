@@ -9,17 +9,18 @@ import java.io.File;
  */
 public class Constants {
 	
-  public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator  + "webapps";
+	/** web项目根目录 */
+	public static final String WEB_ROOT = System.getProperty("user.dir") + File.separator  + "webapps";
   
-  public static final String WEB_RESOURCES = System.getProperty("user.dir") + File.separator  + "resources";
+	/** 资源目录 */
+	public static final String WEB_RESOURCES = System.getProperty("user.dir") + File.separator  + "resources";
   
-  public static final String WEB_CONF = System.getProperty("user.dir") + File.separator  + "conf";
+	/** 配置文件目录 */
+	public static final String WEB_CONF = System.getProperty("user.dir") + File.separator  + "conf";
   
-  //for test   WEB-INF/classes
-  public static final String WEB_CLASSES_ROOT = System.getProperty("user.dir") + File.separator  + "WEB-INF"
-		  + File.separator  + "classes";
-  //for true
-  public static final String WEB_CLASSES_ROOT2 = System.getProperty("user.dir") + File.separator  + "target"
+	/** classes文件目录 */
+	//for test   
+	public static final String WEB_CLASSES_ROOT = System.getProperty("user.dir") + File.separator  + "WEB-INF"
 		  + File.separator  + "classes";
   
 }

@@ -26,7 +26,6 @@ public class HelloServlet implements Servlet {
 	}
 
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
-		
 		res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
 		out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">");

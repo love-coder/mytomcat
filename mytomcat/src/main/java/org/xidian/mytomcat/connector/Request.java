@@ -31,7 +31,6 @@ public class Request implements ServletRequest {
 	}
 
 	/**
-	 * 
 	 * @return 请求相对路径
 	 */
 	public String getUri() {
@@ -43,8 +42,8 @@ public class Request implements ServletRequest {
 	}
 
 	/**
-	 * 
-	 * @param requestString 
+	 * 解析得到uri
+	 * @param requestString 请求字串
 	 * @return
 	 */
 	private String parseUri(String requestString) {
@@ -59,7 +58,7 @@ public class Request implements ServletRequest {
 	}
 
 	/**
-	 * 
+	 * 从socket中解析字节数据
 	 */
 	public void parse() {
 		StringBuffer request = new StringBuffer(2048);

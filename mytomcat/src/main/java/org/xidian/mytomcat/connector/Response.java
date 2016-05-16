@@ -20,10 +20,11 @@ import javax.servlet.ServletOutputStream;
  */
 public class Response implements ServletResponse {
 
-	private static final int BUFFER_SIZE = 1024;  //缓冲大小
-	Request request;
-	OutputStream output;
-	PrintWriter writer;
+	/** 缓冲大小 */
+	private static final int BUFFER_SIZE = 1024;  
+	public Request request;
+	public OutputStream output;
+	public PrintWriter writer;
 
 	public Response(PrintWriter writer) {
 		this.writer = writer;
@@ -48,9 +49,7 @@ public class Response implements ServletResponse {
 		try {
 			File file = new File(Constants.WEB_RESOURCES, request.getUri());
 			fis = new FileInputStream(file);//文件的输入流
-		  
 			int ch = fis.read(bytes, 0, BUFFER_SIZE);
-		  
 			while (ch!=-1) {
 				output.write(bytes, 0, ch);
 				ch = fis.read(bytes, 0, BUFFER_SIZE); 

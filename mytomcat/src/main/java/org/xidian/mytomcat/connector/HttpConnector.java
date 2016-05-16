@@ -16,7 +16,7 @@ import org.xidian.utils.ConfigUtil;
  */
 public class HttpConnector implements Runnable {
 
-	// shutdown 命令
+	/** shutdown 命令 */
 	private static final String SHUTDOWN_COMMAND = "/SHUTDOWN";
 	private boolean shutdown = false;
 	private Container container;
@@ -65,7 +65,7 @@ public class HttpConnector implements Runnable {
 	}
 	
 	/**
-	 * 
+	 * 启动监听
 	 */
 	public void start(){
 		long now=System.currentTimeMillis();
@@ -75,15 +75,15 @@ public class HttpConnector implements Runnable {
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * get容器
+	 * @return 容器
 	 */
 	public Container getContainer() {
 		return container;
 	}
 	
 	/**
-	 * 
+	 * set容器
 	 * @param container
 	 */
 	public void setContainer(Container container) {

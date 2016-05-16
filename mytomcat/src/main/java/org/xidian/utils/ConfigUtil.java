@@ -15,12 +15,13 @@ public class ConfigUtil {
 	private static File configFile = null;
 	private static Properties props = new Properties();
 
+	//staic 
 	static {
 		loadProperty();
 	}
 
 	/**
-	 * some problems for different OS
+	 * some problems for different OS ? hanchun2016-5-16
 	 */
 	private static void loadProperty() {
 		try {
@@ -43,7 +44,7 @@ public class ConfigUtil {
 	}
 
 	/**
-	 * 
+	 * 检查是否配置文件被更新
 	 */
 	private static void checkUpdate() {
 		if (configFile != null) {
@@ -64,10 +65,9 @@ public class ConfigUtil {
 	}
 
 	/**
-	 * 
 	 * @param name 属性名
-	 * @param defaultValue null
-	 * @return
+	 * @param defaultValue
+	 * @return defaultValue null
 	 */
 	public static String getConfig(String name, String defaultValue) {
 		checkUpdate();
@@ -80,18 +80,15 @@ public class ConfigUtil {
 	}
 
 	/**
-	 * 
-	 * @param name
-	 * @return
+	 * @param name 属性名
+	 * @return String value
 	 */
 	public static String getConfig(String name) {
 		return getConfig(name, null);
 	}
 
 	/**
-	 * 
 	 * @author HanChun
-	 *
 	 */
 	static class ReloadThread extends Thread {
 		public void run() {

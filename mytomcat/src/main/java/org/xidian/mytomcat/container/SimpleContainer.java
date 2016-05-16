@@ -22,14 +22,13 @@ import org.xidian.utils.DOMParser;
  */
 public class SimpleContainer implements Container{
 
-	//web.xml映射信息
+	/** web.xml映射信息 */
 	private Map<String,String> servletMapping;
 
 	public void invoke(Request request, Response response) {
 
 		String uri = request.getUri();
 		String servletClassName = findServlet(uri);
-		
 		//加载servlet的class，创建servlet对象
 		URLClassLoader loader = null;
 		try {
