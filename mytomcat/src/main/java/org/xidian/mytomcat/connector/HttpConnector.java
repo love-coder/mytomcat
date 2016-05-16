@@ -51,7 +51,6 @@ public class HttpConnector implements Runnable {
 				if (container!=null && container.findServlet(uri)!=null) {
 					container.invoke(request, response);
 				}else{
-					//如果不是servlet，则调用静态资源方法处理请求
 					response.sendStaticResource();
 				}
 				socket.close();

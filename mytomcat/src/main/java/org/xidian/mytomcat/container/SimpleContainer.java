@@ -51,7 +51,6 @@ public class SimpleContainer implements Container{
 			System.out.println("没有找到相应的Servlet");
 			e.printStackTrace();
 		}
-
 		Servlet servlet = null;
 		try {
 			servlet = (Servlet) servletClass.newInstance();
@@ -66,7 +65,7 @@ public class SimpleContainer implements Container{
 	}
 
 	public void start() {
-		long now=System.currentTimeMillis();
+		long now = System.currentTimeMillis();
 		//web.xml映射
 		servletMapping = DOMParser.getServletMapping();
 		if(servletMapping != null){
