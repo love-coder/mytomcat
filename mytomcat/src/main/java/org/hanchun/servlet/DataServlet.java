@@ -32,7 +32,7 @@ public class DataServlet implements Servlet {
 		out.println("<HTML>");
 		out.println("  <HEAD><TITLE>A Servlet</TITLE></HEAD>");
 		out.println("  <BODY>");
-		out.print("    Hello today is "+req.getRemoteAddr()+", this is a simple Tomcat. This is ");
+		out.print("    Hello today is this is a simple Tomcat. This is ");
 		out.print(this.getClass());
 		out.println(", thank you!");
 		out.println("  </BODY>");

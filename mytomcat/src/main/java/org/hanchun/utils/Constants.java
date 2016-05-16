@@ -3,7 +3,7 @@ package org.hanchun.utils;
 import java.io.File;
 
 /**
- * 根目录
+ * 一些常量
  * @author HanChun
  * @version 1.0 2016-5-14
  */
