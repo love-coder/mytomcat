@@ -1,6 +1,5 @@
 package org.xidian.main;
 
-import org.hanchun.main.TestClass;
 import org.xidian.mytomcat.connector.HttpConnector;
 import org.xidian.mytomcat.container.Container;
 import org.xidian.mytomcat.container.SimpleContainer;
