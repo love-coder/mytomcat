@@ -1,4 +1,4 @@
-package org.hanchun.utils;
+package org.xidian.utils;
 
 import java.io.File;  
 import java.util.HashMap;

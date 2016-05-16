@@ -1,4 +1,4 @@
-package org.hanchun.servlet;
+package org.xidian.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -4,7 +4,7 @@
   
   <servlet>
     <servlet-name>HelloServlet</servlet-name>
-    <servlet-class>org.hanchun.servlet.HelloServlet</servlet-class>
+    <servlet-class>org.xidian.servlet.HelloServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>HelloServlet</servlet-name>
@@ -13,7 +13,7 @@
   
   <servlet>
     <servlet-name>DataServlet</servlet-name>
-    <servlet-class>org.hanchun.servlet.DataServlet</servlet-class>
+    <servlet-class>org.xidian.servlet.DataServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DataServlet</servlet-name>

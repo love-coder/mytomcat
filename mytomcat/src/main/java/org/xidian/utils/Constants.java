@@ -1,4 +1,4 @@
-package org.hanchun.utils;
+package org.xidian.utils;
 
 import java.io.File;
 
@@ -13,8 +13,8 @@ public class Constants {
   
   public static final String WEB_RESOURCES = System.getProperty("user.dir") + File.separator  + "resources";
   
-  //for test
-  public static final String WEB_CLASSES_ROOT = System.getProperty("user.dir") + File.separator  + "target"
+  //for test   WEB-INF/classes
+  public static final String WEB_CLASSES_ROOT = System.getProperty("user.dir") + File.separator  + "WEB-INF"
 		  + File.separator  + "classes";
   //for true
   public static final String WEB_CLASSES_ROOT2 = System.getProperty("user.dir") + File.separator  + "target"

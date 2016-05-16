@@ -1,7 +1,7 @@
-package org.hanchun.mytomcat.container;
+package org.xidian.mytomcat.container;
 
-import org.hanchun.mytomcat.connector.Request;
-import org.hanchun.mytomcat.connector.Response;
+import org.xidian.mytomcat.connector.Request;
+import org.xidian.mytomcat.connector.Response;
 
 /**
  * 容器基本功能

@@ -1,4 +1,4 @@
-package org.hanchun.mytomcat.connector;
+package org.xidian.mytomcat.connector;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import org.hanchun.mytomcat.container.Container;
+import org.xidian.mytomcat.container.Container;
 
 /**
  * @author HanChun

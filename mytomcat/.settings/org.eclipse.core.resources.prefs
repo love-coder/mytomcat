@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/main/java/org/hanchun/mytomcat/connector/HttpConnector.java=UTF-8
-encoding//src/main/java/org/hanchun/mytomcat/connector/Response.java=UTF-8
-encoding//src/main/java/org/hanchun/utils/DOMParser.java=UTF-8
+encoding//src/main/java/org/xidian/mytomcat/connector/HttpConnector.java=UTF-8
+encoding//src/main/java/org/xidian/mytomcat/connector/Response.java=UTF-8
+encoding//src/main/java/org/xidian/utils/DOMParser.java=UTF-8
 encoding/<project>=UTF-8

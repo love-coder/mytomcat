@@ -1,4 +1,4 @@
-package org.hanchun.mytomcat.container;
+package org.xidian.mytomcat.container;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,10 +11,10 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.hanchun.mytomcat.connector.Request;
-import org.hanchun.mytomcat.connector.Response;
-import org.hanchun.utils.Constants;
-import org.hanchun.utils.DOMParser;
+import org.xidian.mytomcat.connector.Request;
+import org.xidian.mytomcat.connector.Response;
+import org.xidian.utils.Constants;
+import org.xidian.utils.DOMParser;
 
 /**
  * @author HanChun

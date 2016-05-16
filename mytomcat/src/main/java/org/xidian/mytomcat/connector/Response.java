@@ -1,4 +1,4 @@
-package org.hanchun.mytomcat.connector;
+package org.xidian.mytomcat.connector;
 
 import java.io.OutputStream;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 import java.util.Locale;
 import javax.servlet.ServletResponse;
 
-import org.hanchun.utils.Constants;
+import org.xidian.utils.Constants;
 
 import javax.servlet.ServletOutputStream;
 
