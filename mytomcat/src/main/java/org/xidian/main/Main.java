@@ -19,9 +19,9 @@ public class Main {
 	public static void main(String[] args) {
 		
 //		//1.解压war包到mytomcat的webapp下
-//		WarUtil.unzip(Constants.WEB_APPS+ConfigUtil.getConfig("war_name"), Constants.WEB_APPS +
+//		WarUtil.unzip(Constants.WEB_APPS+ConfigUtil.getConfig("warname"), Constants.WEB_APPS +
 //				File.separator + ConfigUtil.getConfig("warname"));
-		//2.启动容器 .
+		//2.启动容器 
 		Container simpleContainer = new SimpleContainer();
 		simpleContainer.start();
 		//3.在服务端启动监听
