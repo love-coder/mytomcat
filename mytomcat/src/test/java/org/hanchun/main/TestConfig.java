@@ -1,13 +1,22 @@
 package org.hanchun.main;
 
+import org.junit.Test;
 import org.xidian.utils.ConfigUtil;
+import org.xidian.utils.Constants;
+import org.xidian.utils.WarUtil;
 
 public class TestConfig {
 	
-	public static void main(String[] args) {
-		System.out.println(ConfigUtil.getConfig("port"));;
-//		System.out.println();
-		//System.out.println(TestClass.class.getResource("TestConfig").getPath());;
+//	@Test
+//	public void testConf(){
+//		System.out.println(ConfigUtil.getConfig("port"));
+//	}
+	
+	@Test
+	public void testWar(){
+		
+		WarUtil.unzip("c:/war/mytomcat.war","c:/war");
+		
 	}
 	
 	

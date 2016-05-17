@@ -22,11 +22,12 @@ import org.apache.commons.io.FileUtils;
 /**
  * 处理WAR文件工具类
  * @author HanChun
- * @version 
+ * @version 1.0 2016-5-17
  */
 public class WarUtil {
 	
 	/**
+	 * 解压war文件
 	 * @param warPath war包路径
 	 * @param unzipPath 解压后存放路径
 	 */

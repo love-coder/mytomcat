@@ -17,6 +17,9 @@ public class Constants {
   
 	/** 配置文件目录 */
 	public static final String WEB_CONF = System.getProperty("user.dir") + File.separator  + "conf";
+	
+	/** 项目部署文件目录 */
+	public static final String WEB_APPS = System.getProperty("user.dir") + File.separator  + "webapps";
   
 	/** classes文件目录 */
 	//for test   
