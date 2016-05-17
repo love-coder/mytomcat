@@ -11,6 +11,7 @@ import org.xidian.mytomcat.container.Container;
 import org.xidian.utils.ConfigUtil;
 
 /**
+ * 连接器类
  * @author HanChun
  * @version 1.0 2016-5-14
  */
@@ -21,6 +22,9 @@ public class HttpConnector implements Runnable {
 	private boolean shutdown = false;
 	private Container container;
 
+	/**
+	 * 
+	 */
 	public void run() {
 		ServerSocket serverSocket = null;
 		int port = Integer.parseInt(ConfigUtil.getConfig("port"));
